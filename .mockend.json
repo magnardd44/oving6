@@ -1,46 +1,14 @@
 {
-  "tidligereResultater": [
-    {
-      "dato": "lørdag 1. oktober",
-      "tall": [4, 5, 6, 9, 11, 22, 24],
-      "tilleggstall": 15,
-      "omsetning": "77 445 625 kr",
-      "premier": {
-        "antallVinnere": [0, 12, 576, 22858, 308727],
-        "premie": ["Gullrekning!", "169 410 kr", "3695 kr", "100 kr", "45 kr"]
-      },
-      "ukens_vinnere": {
-        "kjønn": [],
-        "fylke": []
-      }
-    },
-    {
-      "dato": "lørdag 8. oktober",
-      "tall": [5, 8, 9, 10, 12, 23, 27],
-      "tilleggstall": 6,
-      "omsetning": "87 939 805 kr",
-      "premier": {
-        "antallVinnere": [4, 38, 728, 27537, 369110],
-        "premie": ["7 690 420 kr", "60 745 kr", "3 320 kr", "95 kr", "45 kr"]
-      },
-      "ukens_vinnere": {
-        "kjønn": ["Mann", "Kvinne", "Mann", "Mann"],
-        "fylke": ["Vestland", "Oslo", "Viken", "Oslo"]
-      }
-    },
-    {
-      "dato": "lørdag 15. oktober",
-      "tall": [3, 4, 17, 22, 23, 28, 33],
-      "tilleggstall": 25,
-      "omsetning": "79 673 125 kr",
-      "premier": {
-        "antallVinnere": [1, 15, 500, 21322, 303169],
-        "premie": ["14 819 200 kr", "139 425 kr", "4 380 kr", "110 kr", "50 kr"]
-      },
-      "ukens_vinnere": {
-        "kjønn": ["Mann"],
-        "fylke": ["Vestland"]
-      }
+  "Post": {
+    "title": { "string": {} },
+    "comments": {
+      "hasMany": "Comment"
     }
-  ]
+  },
+  "Comment": {
+    "body": { "string": {} },
+    "post": {
+      "belongsTo": "Post"
+    }
+  }
 }
